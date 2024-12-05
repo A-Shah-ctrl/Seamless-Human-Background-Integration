@@ -19,6 +19,6 @@ Steps to blend a human from an outdoor image into an indoor setting:
       - If you want to generate a laplacian blend dataset = generate_dataset(blending="laplacian")
       - If you want to generate a poisson blend dataset = generate_dataset(blending="poisson")
       - If you want to generate a dataset with our technique = generate_dataset(blending="inpaint")
-6) Running the cell under it to download the zipped file for the generated datasets.
+6) Running the cell under it to download the zipped file for the generated datasets. The zipped file will contain the blended images and a copy of the blended images with bounding boxes (incase they need to be used as object detection datasets). 
    
-<b>Note</b>: If you use local Jupyter Notebook you may have to slightly change calls to cv2.imshow()
+<b>Note</b>: If you use local Jupyter Notebook you may have to slightly change calls to cv2.imshow().
