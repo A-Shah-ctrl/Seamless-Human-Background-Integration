@@ -9,16 +9,17 @@ We have the following blending techniques available -
 
 
 Steps to blend a human from an outdoor image into an indoor setting:
-1) Clone our repository
-2) Put all your indoor background images in the "back" folder. If you don't have any indoor images of your own you can use ours [here](https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing).
-3) Put all your outdoor images containing humans in the "front" folder. If you don't have any outdoor images of your own you can use ours.
-4) Open the "DatasetGeneration.ipynb" notebook on Google Collab (or locally using Jupyter Notebook).
+1) Open the colab notebook here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/weiji14/deepbedmap/]
+2) Clone our repository in colab workspace
+3) Put all your indoor background images in the "back" folder. If you don't have any indoor images of your own you can use ours [here](https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing).
+4) Put all your outdoor images containing humans in the "front" folder. If you don't have any outdoor images of your own you can use ours [here](https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing).
 5) Go to the section of the notebook that says "Generate all datasets" and paste the following code into the cell below it and run the cell:
       - If you want to generate datasets with all techniques - generate_dataset()
       - If you want to generate a simple cut-paste dataset = generate_dataset(blending="cutpaste")
       - If you want to generate a laplacian blend dataset = generate_dataset(blending="laplacian")
       - If you want to generate a poisson blend dataset = generate_dataset(blending="poisson")
       - If you want to generate a dataset with our technique = generate_dataset(blending="inpaint")
-6) Running the cell under it to download the zipped file for the generated datasets. The zipped file will contain the blended images and a copy of the blended images with bounding boxes (incase they need to be used as object detection datasets). 
+6) Running the cell under it to download the zipped file for the generated datasets and bounding boxes. The zipped file will contain the blended images and a copy of the blended images with bounding boxes (incase they need to be used as object detection datasets).
+We already have the downloaded datasets in drive [here]([https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing](https://drive.google.com/drive/folders/1kM5gjWWm6CEaO1gbnBYnvurmNirJ-k0U?usp=sharing))
    
 <b>Note</b>: If you use local Jupyter Notebook you may have to slightly change calls to cv2.imshow().
