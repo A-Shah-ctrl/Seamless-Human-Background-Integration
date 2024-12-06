@@ -35,3 +35,5 @@ Steps to blend a human from an outdoor image into an indoor setting:
 7) Use the train.ipynb notebook to train the models.
 8) All the models will be saved in the models folder. We have already trained and saved the best models [here](https://drive.google.com/drive/folders/1c4eXjVIyI_u5cOO8SFdxkXewreCASB1j?usp=sharing)
 
+[![Watch the video](imgs/poc demo.mp4)]
+
