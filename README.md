@@ -1,6 +1,6 @@
 # Seamless-Human-Background-Integration
 ![screenshot](imgs/comparison.png)
-### Generating Augmented Datasets
+## Generating Augmented Datasets
 We have the following blending techniques available - 
 1) "cutpaste" - simply cuts the human from the outdoor image and pastes it onto the indoor image (with a blur around the borders)
 2) "laplacian" - uses the famous Laplacian blending technique (involves Gaussian and Laplacian pyramid generation)
@@ -24,7 +24,7 @@ We already have the downloaded datasets in drive [here](https://drive.google.com
    
 <b>Note</b>: If you use local Jupyter Notebook you may have to slightly change calls to cv2.imshow().
 
-### Traning models for object detection
+## Traning models for object detection
 Steps to blend a human from an outdoor image into an indoor setting:
 1) Clone our repository
 2) Create conda environment using the requirements.txt file
