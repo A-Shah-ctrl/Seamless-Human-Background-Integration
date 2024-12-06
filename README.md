@@ -31,4 +31,5 @@ Steps to blend a human from an outdoor image into an indoor setting:
 3) Add the zip files from previous steps to our repository
 4) Run prepare_for_training.py file
 5) If you want deep image blend step 2 images, run deep_image_blending_step2.py file
+6) This will create a datasets folder and have all the datasets ready for training and evaluation. We have already done this step and you can access the zip file [here](https://drive.google.com/file/d/1x_6BSGc4Ssgbqn-2WK0d-yYCM_A0t8X2/view?usp=drive_link).
 
