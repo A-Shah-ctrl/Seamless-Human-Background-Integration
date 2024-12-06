@@ -81,7 +81,6 @@ def step_2(images, output_dir, split):
         # Save image from the second pass
         imsave(os.path.join(f"{output_dir}/{split}/images", file), input_img_np.astype(np.uint8))
         shutil.copy(f"boxes/{label_name}", f"{output_dir}/{split}/labels/{label_name}")
-        break
 
 
 
