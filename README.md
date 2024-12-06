@@ -18,8 +18,17 @@ Steps to blend a human from an outdoor image into an indoor setting:
       - If you want to generate a simple cut-paste dataset = generate_dataset(blending="cutpaste")
       - If you want to generate a laplacian blend dataset = generate_dataset(blending="laplacian")
       - If you want to generate a poisson blend dataset = generate_dataset(blending="poisson")
-      - If you want to generate a dataset with our technique = generate_dataset(blending="inpaint")
+      - If you want to generate a dataset with our technique = generate_dataset(blending="inpaint") Note: This is without deep image blend step 2
 6) Running the cell under it to download the zipped file for the generated datasets and bounding boxes. The zipped file will contain the blended images and a copy of the blended images with bounding boxes (incase they need to be used as object detection datasets).
 We already have the downloaded datasets in drive [here](https://drive.google.com/drive/folders/1kM5gjWWm6CEaO1gbnBYnvurmNirJ-k0U?usp=sharing)
    
 <b>Note</b>: If you use local Jupyter Notebook you may have to slightly change calls to cv2.imshow().
+
+### Traning models for object detection
+Steps to blend a human from an outdoor image into an indoor setting:
+1) Clone our repository
+2) Create conda environment using the requirements.txt file
+3) Add the zip files from previous steps to our repository
+4) Run prepare_for_training.py file
+5) If you want deep image blend step 2 images, run deep_image_blending_step2.py file
+
