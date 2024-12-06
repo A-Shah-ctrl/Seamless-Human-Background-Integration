@@ -9,7 +9,7 @@ We have the following blending techniques available -
 
 
 Steps to blend a human from an outdoor image into an indoor setting:
-1) Open the colab notebook here [![Open In Colab](https://colab.research.google.com/drive/1JgsA1C_Y2OqTOZfkd5ONurR3yX3_r9WW?usp=sharing)]
+1) Open the colab notebook here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JgsA1C_Y2OqTOZfkd5ONurR3yX3_r9WW?usp=sharing)
 2) Clone our repository in colab workspace
 3) Put all your indoor background images in the "back" folder. If you don't have any indoor images of your own you can use ours [here](https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing).
 4) Put all your outdoor images containing humans in the "front" folder. If you don't have any outdoor images of your own you can use ours [here](https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing).
