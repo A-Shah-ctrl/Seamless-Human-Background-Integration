@@ -31,9 +31,15 @@ Steps to blend a human from an outdoor image into an indoor setting:
 3) Add the zip files from previous steps to our repository
 4) Run prepare_for_training.py file
 5) If you want deep image blend step 2 images, run deep_image_blending_step2.py file
-6) This will create a datasets folder and have all the datasets ready for training and evaluation. We have already done this step and you can access the zip file [here](https://drive.google.com/file/d/1x_6BSGc4Ssgbqn-2WK0d-yYCM_A0t8X2/view?usp=drive_link). You can extract and place it in the cloned repository
+6) This will create a datasets folder and have all the datasets ready for training and evaluation. We have already done this step and you can access the zip file [here](https://drive.google.com/file/d/1x_6BSGc4Ssgbqn-2WK0d-yYCM_A0t8X2/view?usp=drive_link). This also includes the test set we used for evaluation in the folder indoor_test You can extract and place it in the cloned repository
 7) Use the train.ipynb notebook to train the models.
 8) All the models will be saved in the models folder. We have already trained and saved the best models [here](https://drive.google.com/drive/folders/1c4eXjVIyI_u5cOO8SFdxkXewreCASB1j?usp=sharing)
+
+## Evaluating models for object detection
+You can use our evaluate.ipynb notebook to evaluate the models trained and make bounding boxes on the images
+
+##Future direction
+The idea was that when a human is detected in close proximity to the VR user, the human would pass through the VR scenes, alerting the user and helping to prevent collisions
 
 ![](imgs/poc_demo.gif)
 
