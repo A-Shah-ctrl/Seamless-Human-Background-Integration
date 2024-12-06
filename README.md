@@ -10,7 +10,7 @@ We have the following blending techniques available -
 
 Steps to blend a human from an outdoor image into an indoor setting:
 1) Clone our repository
-2) Put all your indoor background images in the "back" folder. If you don't have any indoor images of your own you can use ours.
+2) Put all your indoor background images in the "back" folder. If you don't have any indoor images of your own you can use ours [here](https://drive.google.com/drive/folders/1zX4OMQAFEivr-3Po37BnGDsEGBHGJ8a2?usp=sharing).
 3) Put all your outdoor images containing humans in the "front" folder. If you don't have any outdoor images of your own you can use ours.
 4) Open the "DatasetGeneration.ipynb" notebook on Google Collab (or locally using Jupyter Notebook).
 5) Go to the section of the notebook that says "Generate all datasets" and paste the following code into the cell below it and run the cell:
