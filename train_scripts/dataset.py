@@ -4,7 +4,7 @@ from PIL import Image
 from torchvision.transforms import functional as F
 import train_scripts.transforms as T
 
-
+# Dataset class for all the datasets in the datastes folder
 class PennFudanDataset(torch.utils.data.Dataset):
     def __init__(self, root, transforms=None, split="train"):
         self.root = root
@@ -40,15 +40,14 @@ class PennFudanDataset(torch.utils.data.Dataset):
             ymax = (yc + h/2)*400
             boxes.append([xmin, ymin, xmax, ymax])
 
+        # arranging for coco evaluation api
         boxes = torch.as_tensor(boxes, dtype=torch.float32)
-        # there is only one class
 
         labels = torch.ones((num_objs,), dtype=torch.int64)
 
         image_id = torch.tensor([idx])
         area = (boxes[:, 3] - boxes[:, 1]) * (boxes[:, 2] - boxes[:, 0])
 
-        # suppose all instances are not crowd
         iscrowd = torch.zeros((num_objs,), dtype=torch.int64)
 
         target = {}
@@ -68,13 +67,14 @@ class PennFudanDataset(torch.utils.data.Dataset):
     
 
 
+# Convert pil image to tensor in raneg 0 to 1
 class ToTensor(object):
     def __call__(self, image, target):
         image = F.to_tensor(image)
         return image, target
     
 
-
+# Retrieve transformations to be applied on the training set
 def get_transform(train):
     transforms = []
     # converts the image, a PIL image, into a PyTorch Tensor
@@ -87,7 +87,7 @@ def get_transform(train):
 
 
 
-
+# Retrieve pytorch training and test dataset objects for any of the datasets in folder "datasets"
 def get_datasets(name):
     dataset_train = PennFudanDataset(f'datasets/{name}', get_transform(train=True))
     dataset_test = PennFudanDataset(f'datasets/{name}', get_transform(train=False), split="valid")
@@ -101,6 +101,7 @@ def get_datasets(name):
     return dataset_train, dataset_test
 
 
+# Utility functions for make data loader
 def collate_fn(batch):
     return tuple(zip(*batch))
 

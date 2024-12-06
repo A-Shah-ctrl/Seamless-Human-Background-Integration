@@ -7,7 +7,7 @@ from train_scripts.coco_eval import CocoEvaluator
 import train_scripts.utils as utils
 
 
-
+# Retrieve pytorch model with num_classes as the output layer for finetuning
 def get_model(num_classes):
     # load an instance segmentation model pre-trained on COCO
     model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=False)
@@ -23,7 +23,6 @@ def get_model(num_classes):
 
 
 def warmup_lr_scheduler(optimizer, warmup_iters, warmup_factor):
-
     def f(x):
         if x >= warmup_iters:
             return 1
@@ -44,10 +43,12 @@ def _get_iou_types(model):
     print(iou_types)
     return iou_types
 
+
+# Function to evaluate model using coco evaluation api
 @torch.no_grad()
 def evaluate(model, data_loader, device):
     n_threads = torch.get_num_threads()
-    # FIXME remove this and make paste_masks_in_image run on the GPU
+
     torch.set_num_threads(1)
     cpu_device = torch.device("cpu")
     model.eval()
