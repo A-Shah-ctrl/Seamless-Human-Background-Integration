@@ -99,7 +99,7 @@ num_steps = 500
 
 
 OUTPUT_DIR = "datasets/inpaint_dib"
-INPUT_DIR = "inpaint_dib"
+INPUT_DIR = "inpaint"
 
 create_folder(OUTPUT_DIR)
     
