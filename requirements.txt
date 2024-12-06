@@ -1,0 +1,9 @@
+torch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1
+torch-cuda==12.4
+pycocotools-windows==2.0.0.2
+scikit-image==0.21.0
+tqdm==4.67.0
+numpy==1.23.5
+opencv-python==4.10.0.84
