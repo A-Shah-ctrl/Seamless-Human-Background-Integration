@@ -1,5 +1,5 @@
 # Seamless-Human-Background-Integration
-
+![screenshot](imgs/comparison.png)
 ### Generating Augmented Datasets
 We have the following blending techniques available - 
 1) "cutpaste" - simply cuts the human from the outdoor image and pastes it onto the indoor image (with a blur around the borders)
