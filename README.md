@@ -38,7 +38,7 @@ Steps to blend a human from an outdoor image into an indoor setting:
 ## Evaluating models for object detection
 You can use our evaluate.ipynb notebook to evaluate the models trained and make bounding boxes on the images
 
-##Future direction
+## Future direction
 The idea was that when a human is detected in close proximity to the VR user, the human would pass through the VR scenes, alerting the user and helping to prevent collisions
 
 ![](imgs/poc_demo.gif)
